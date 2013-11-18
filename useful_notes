@@ -1,0 +1,26 @@
+----------------------------------------------------------
+ CTAGS
+----------------------------------------------------------
+### Make project tags - The below makes a project wide tags file. Vim is setup to look for this
+ctags --file-scope=no -R
+
+### Using tags
+ctrl + ] = when you're over a function, this opens it up
+ctrl + t = when you've gone into a function, ctrl + t brings you back to where you were
+
+alternatively, inside of using ctrl + ], use the below;
+
+:ts – shows the list.
+:tn – goes to the next tag in that list.
+:tp - goes to the previous tag in that list.
+:tf – goes to the function which is in the first of the list.
+:tl – goes to the function which is in the last of the list.
+
+----------------------------------------------------------
+ MISC
+----------------------------------------------------------
+### FIND IN FILES using vim's pattern matching
+:vimgrep [pattern] /home/code/[search_directory]/**/*.[extension]
+:copen 20
+
+
