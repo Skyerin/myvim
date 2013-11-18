@@ -1,8 +1,8 @@
+" pathogen - all my plugin stuff
+execute pathogen#infect('bundle/{}')
+
 " Plugins
 filetype plugin indent on
-
-" pathogen - all my plugin stuff
-execute pathogen#infect()
 
 set nocompatible
 set history=50000
