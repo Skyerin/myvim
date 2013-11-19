@@ -16,6 +16,11 @@ alternatively, inside of using ctrl + ], use the below;
 :tf – goes to the function which is in the first of the list.
 :tl – goes to the function which is in the last of the list.
 
+NOTE: If there is only one actual occurrence of the class/variable being searched for, :ts may
+      return a really weird result/no result at all. In this instance, you need to use the
+      ctrl + ] combination and it will take you to the declaration.
+
+
 ----------------------------------------------------------
  MISC
 ----------------------------------------------------------
