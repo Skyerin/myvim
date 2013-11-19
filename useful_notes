@@ -22,5 +22,3 @@ alternatively, inside of using ctrl + ], use the below;
 ### FIND IN FILES using vim's pattern matching
 :vimgrep [pattern] /home/code/[search_directory]/**/*.[extension]
 :copen 20
-
-
