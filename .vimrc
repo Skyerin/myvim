@@ -1,7 +1,7 @@
 runtime! debian.vim
 
 " pathogen - all my plugin stuff
-execute pathogen#infect()
+execute pathogen#infect('bundle/{}')
 
 set nocompatible
 set history=50000

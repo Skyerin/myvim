@@ -1,3 +1,6 @@
 [submodule "bundle/vim-neatstatus"]
 	path = bundle/vim-neatstatus
 	url = git://github.com/maciakl/vim-neatstatus.git
+[submodule "bundle/vim-autocose"]
+	path = bundle/vim-autocose
+	url = https://github.com/Townk/vim-autoclose.git

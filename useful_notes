@@ -19,6 +19,7 @@ alternatively, inside of using ctrl + ], use the below;
 ----------------------------------------------------------
  MISC
 ----------------------------------------------------------
-### FIND IN FILES using vim's pattern matching
-:vimgrep [pattern] /home/code/[search_directory]/**/*.[extension]
-:copen 20
+### ADD NEW PLUGINS TO VIM VIA GITHUB
+git submodule add [repository_name] bundle/[folder_name]
+git submodule init
+git submodule update
