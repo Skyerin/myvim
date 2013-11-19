@@ -4,3 +4,6 @@
 [submodule "bundle/vim-autocose"]
 	path = bundle/vim-autocose
 	url = https://github.com/Townk/vim-autoclose.git
+[submodule "bundle/vim-phpmanual"]
+	path = bundle/vim-phpmanual
+	url = https://github.com/MarcWeber/vim-addon-php-manual.git

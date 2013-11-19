@@ -1,3 +1,6 @@
 # Ignoring all of vim's backup files.
 # They saved me this time around so I'm going to use a .gitignore for them instead
 *~
+# Want to ignore any of the swp files; this can happen if I commit whilst I'm in vim
+# Only happens when I'm being super lazy. Yay laziness
+*swp
