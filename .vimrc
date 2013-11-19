@@ -17,6 +17,9 @@ set autowrite
 set incsearch
 set showmatch
 
+" enable mouse
+set mouse=a
+
 " Show trailing spaces, show tabs etc
 set list
 set listchars=nbsp:.,tab:>.,trail:.,extends:#,
