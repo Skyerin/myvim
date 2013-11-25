@@ -17,15 +17,15 @@ set autowrite
 set incsearch
 set showmatch
 
-" enable mouse
-set mouse=a
-
 " Show trailing spaces, show tabs etc
 set list
 set listchars=nbsp:.,tab:>.,trail:.,extends:#,
 
 " Show line numbers
 set number
+
+set cursorline
+set cursorcolumn
 
 " Show the command as it's being typed
 set showcmd
