@@ -67,6 +67,4 @@ map <F4> :execute "vimgrep /" . expand("<cword>") . "/j ../**/*" <Bar> cw<CR>
 " Can we get this to work? Please...?
 autocmd FileType php set keywordprg=pman
 
-" If using a dark background within the editing area and syntax highlighting
-" turn on this option as well
 set background=dark
