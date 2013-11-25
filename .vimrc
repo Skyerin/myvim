@@ -27,6 +27,8 @@ set number
 set cursorline
 set cursorcolumn
 
+set endofline
+
 " Show the command as it's being typed
 set showcmd
 
@@ -34,9 +36,21 @@ set showcmd
 " line enables syntax highlighting by default.
 syntax on
 
-" If using a dark background within the editing area and syntax highlighting
-" turn on this option as well
-set background=dark
+let autocmd_colorscheme_loaded = 1
+
+" Custom keywords colour scheme
+highlight keytopics ctermbg=LightCyan guibg=LightCyan ctermfg=Yellow guifg=Yellow
+
+if has("autocmd")
+	if v:version > 701
+		autocmd Syntax * call matchadd('keytopics',  '\W\zs\(THEORY:\)')
+		autocmd Syntax * call matchadd('keytopics',  '\W\zs\(NOTE:\)')
+		autocmd Syntax * call matchadd('keytopics',  '\W\zs\(DISCUSSION:\)')
+		autocmd Syntax * call matchadd('keytopics',  '\W\zs\(IDEA:\)')
+		autocmd Syntax * call matchadd('keytopics',  '\W\zs\(NEEDS ATTENTION:\)')
+		autocmd Syntax * call matchadd('keytopics',  '\W\zs\(EXPLANATION:\)')
+	endif
+endif
 
 if has("autocmd")
 	au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
@@ -52,3 +66,7 @@ map <F4> :execute "vimgrep /" . expand("<cword>") . "/j ../**/*" <Bar> cw<CR>
 
 " Can we get this to work? Please...?
 autocmd FileType php set keywordprg=pman
+
+" If using a dark background within the editing area and syntax highlighting
+" turn on this option as well
+set background=dark
