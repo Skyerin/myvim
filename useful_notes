@@ -44,13 +44,13 @@ NOTE: If there is only one actual occurrence of the class/variable being searche
       ctrl + ] combination and it will take you to the declaration.
 
 ----------------------------------------------------------
- CTAGS
+ NERDCommenter
 ----------------------------------------------------------
 ### NERDCommenter help
 [count]\ci - Toggles the comment state of the selected line(s) individually.
 [count]\cy- Same as cc except that the commented line(s) are yanked first.
 \c$ - Comments the current line from the cursor to the end of line.
-\cA - Adds comment delimiters to the end of line and goes into insert mode between 
+\cA - Adds comment delimiters to the end of line and goes into insert mode between.
 
 ----------------------------------------------------------
  MISC
