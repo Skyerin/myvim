@@ -24,7 +24,7 @@ set listchars=nbsp:.,tab:>.,trail:.,extends:#,
 " Show line numbers
 set number
 
-set cursorline
+"set cursorline
 set cursorcolumn
 
 set endofline
