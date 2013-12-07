@@ -24,11 +24,6 @@ set listchars=nbsp:.,tab:>.,trail:.,extends:#,
 " Show line numbers
 set number
 
-"set cursorline
-set cursorcolumn
-
-set endofline
-
 " Show the command as it's being typed
 set showcmd
 
