@@ -36,16 +36,18 @@ highlight keytopics ctermbg=LightCyan guibg=LightCyan ctermfg=Yellow guifg=Yello
 
 if has("autocmd")
 	if v:version > 701
-		autocmd Syntax * call matchadd('keytopics',  '\W\zs\(TODO:\)')
-		autocmd Syntax * call matchadd('keytopics',  '\W\zs\(THEORY:\)')
-		autocmd Syntax * call matchadd('keytopics',  '\W\zs\(NOTE:\)')
-		autocmd Syntax * call matchadd('keytopics',  '\W\zs\(DISCUSSION:\)')
-		autocmd Syntax * call matchadd('keytopics',  '\W\zs\(IDEA:\)')
-		autocmd Syntax * call matchadd('keytopics',  '\W\zs\(NEEDS ATTENTION:\)')
-		autocmd Syntax * call matchadd('keytopics',  '\W\zs\(EXPLANATION:\)')
-		autocmd Syntax * call matchadd('keytopics',  '\W\zs\(THOUGHT:\)')
-		autocmd Syntax * call matchadd('keytopics',  '\W\zs\(QUESTION:\)')
-		autocmd Syntax * call matchadd('keytopics',  '\W\zs\(UPDATE:\)')
+		autocmd Syntax * call matchadd('keytopics', '\W\zs\(TODO:\)')
+		autocmd Syntax * call matchadd('keytopics', '\W\zs\(THEORY:\)')
+		autocmd Syntax * call matchadd('keytopics', '\W\zs\(NOTE:\)')
+		autocmd Syntax * call matchadd('keytopics', '\W\zs\(DISCUSSION:\)')
+		autocmd Syntax * call matchadd('keytopics', '\W\zs\(IDEA:\)')
+		autocmd Syntax * call matchadd('keytopics', '\W\zs\(NEEDS ATTENTION:\)')
+		autocmd Syntax * call matchadd('keytopics', '\W\zs\(EXPLANATION:\)')
+		autocmd Syntax * call matchadd('keytopics', '\W\zs\(THOUGHT:\)')
+		autocmd Syntax * call matchadd('keytopics', '\W\zs\(QUESTION:\)')
+		autocmd Syntax * call matchadd('keytopics', '\W\zs\(UPDATE:\)')
+		autocmd Syntax * call matchadd('keytopics', '\W\zs\(PROBLEM:\)')
+		autocmd Syntax * call matchadd('keytopics', '\W\zs\(BIG GIANT HEADACHE:\)')
 	endif
 endif
 
