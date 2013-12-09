@@ -48,6 +48,7 @@ if has("autocmd")
 		autocmd Syntax * call matchadd('keytopics', '\W\zs\(UPDATE:\)')
 		autocmd Syntax * call matchadd('keytopics', '\W\zs\(PROBLEM:\)')
 		autocmd Syntax * call matchadd('keytopics', '\W\zs\(BIG GIANT HEADACHE:\)')
+		autocmd Syntax * call matchadd('keytopics', '\W\zs\(DELETE THIS:\)') " Added this highlight because of sometimes, when refactoring code, I want to keep something around before I delete, I leave this comment in to make sure I do not forget to delete that section
 	endif
 endif
 

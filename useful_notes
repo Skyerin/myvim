@@ -5,7 +5,7 @@
  BRANCHES
 ----------------------------------------------------------
 ### Create a new branch. When we work on a new feature, we create a branch for it. We develop it on the branch.
-git branch branch_name_go_here 
+git branch branch_name_go_here
 
 ### Checkout a remote branch into a local one. Make sure you do a git pull first before you do this.
 git checkout -b new_branch_name_goes_here
@@ -18,6 +18,16 @@ git merge branch_name_to_merge_go_here
 ### Find in files in Git
 git grep "your_search_goes_here"
 
+
+----------------------------------------------------------
+ SmartGit
+----------------------------------------------------------
+### Cherrypicking instructions
+1) Make the commits on the branch.
+2) Switch branch to master
+3) branch->cherrypick
+4) Click on branches. Make sure only master and the other branch are selected.
+5) Click on cherrypick. All should be fine from this point on.
 
 --------------------------------------------------------------------------------------------------------------------
  VIM
@@ -42,7 +52,7 @@ alternatively, inside of using ctrl + ], use the below;
 
 NOTE: If there is only one actual occurrence of the class/variable being searched for, :ts may
       return a really weird result/no result at all. In this instance, you need to use the
-      ctrl + ] combination and it will take you to the declaration.
+      ctrl + ] and it will take you to the declaration.
 
 ----------------------------------------------------------
  NERDCommenter
