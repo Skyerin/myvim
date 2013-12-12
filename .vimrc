@@ -24,6 +24,9 @@ set listchars=nbsp:.,tab:>.,trail:.,extends:#,
 " Show line numbers
 set number
 
+" Show vertical line. Good for lining up code.
+set cursorcolumn
+
 " Show the command as it's being typed
 set showcmd
 
@@ -49,6 +52,9 @@ if has("autocmd")
 		autocmd Syntax * call matchadd('keytopics', '\W\zs\(PROBLEM:\)')
 		autocmd Syntax * call matchadd('keytopics', '\W\zs\(BIG GIANT HEADACHE:\)')
 		autocmd Syntax * call matchadd('keytopics', '\W\zs\(DELETE THIS:\)') " Added this highlight because of sometimes, when refactoring code, I want to keep something around before I delete, I leave this comment in to make sure I do not forget to delete that section
+		autocmd Syntax * call matchadd('keytopics', '\W\zs\(I HAVE NO CLUE:\)')
+		autocmd Syntax * call matchadd('keytopics', '\W\zs\(EUREKA:\)')
+		autocmd Syntax * call matchadd('keytopics', '\W\zs\(DISCOVERY:\)')
 	endif
 endif
 
@@ -61,11 +67,9 @@ endif
 " Tags file; using a project wide one. Because I'm lazy!!!
 set tags=./tags,./../tags,./../../tags,./../../../tags,./../../../../tags,./../../../../../tags,./../../../../../../tags,./../../../../../../../tags,./../../../../../../../../tags
 
-
-
 " NEEDS ATTENTION: I want a find in files. Why? Because I said so. Sometimes the tags don't work!
 " However, this bugger has it's own set of problems too! We need to find a way to make it start checking from the root directory of the project.
-map <F4> :execute "vimgrep /" . expand("<cword>") . "/j ../**/*" <Bar> cw<CR>
+map <F4> :execute "vimgrep /" . expand("<cword>") . "/j */**/*" <Bar> cw<CR>
 
 " Problem: Whenever I wanted to open stuff from the quickfix list, it would go over my current buffer.
 " That was an absolute pain. Therefore, the below should fix this! Yay!
