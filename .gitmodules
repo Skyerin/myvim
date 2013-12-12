@@ -13,3 +13,9 @@
 [submodule "bundle/autocose"]
 	path = bundle/autocose
 	url = https://github.com/Townk/vim-autoclose.git
+[submodule "bundle/vim-csapprox"]
+	path = bundle/vim-csapprox
+	url = https://github.com/godlygeek/csapprox.git
+[submodule "bundle/vim-solarized"]
+	path = bundle/vim-solarized
+	url = https://github.com/altercation/vim-colors-solarized.git

@@ -34,8 +34,15 @@ set showcmd
 " line enables syntax highlighting by default.
 syntax on
 
+set background=dark
+let g:solarized_termtrans=1
+let g:solarized_termcolors=256
+let g:solarized_contrast="high"
+let g:solarized_visibility="high"
+colorscheme solarized
+
 " Custom keywords colour scheme
-highlight keytopics ctermbg=LightCyan guibg=LightCyan ctermfg=Yellow guifg=Yellow
+highlight keytopics ctermbg=128 guibg=128 ctermfg=015 guifg=015 " 128 is a purple colour. 015 is white.
 
 if has("autocmd")
 	if v:version > 701
@@ -57,8 +64,6 @@ if has("autocmd")
 		autocmd Syntax * call matchadd('keytopics', '\W\zs\(DISCOVERY:\)')
 	endif
 endif
-
-set background=dark
 
 if has("autocmd")
 	au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
