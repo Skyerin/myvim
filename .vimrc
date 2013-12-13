@@ -43,9 +43,11 @@ colorscheme solarized
 
 " Custom keywords colour scheme
 highlight keytopics ctermbg=128 guibg=128 ctermfg=015 guifg=015 " 128 is a purple colour. 015 is white.
+highlight spacesHighlight ctermbg=183 guibg=183 ctermfg=183 guifg=183
 
 if has("autocmd")
 	if v:version > 701
+		" KEYTOPICS
 		autocmd Syntax * call matchadd('keytopics', '\W\zs\(TODO:\)')
 		autocmd Syntax * call matchadd('keytopics', '\W\zs\(THEORY:\)')
 		autocmd Syntax * call matchadd('keytopics', '\W\zs\(NOTE:\)')
@@ -62,6 +64,10 @@ if has("autocmd")
 		autocmd Syntax * call matchadd('keytopics', '\W\zs\(I HAVE NO CLUE:\)')
 		autocmd Syntax * call matchadd('keytopics', '\W\zs\(EUREKA:\)')
 		autocmd Syntax * call matchadd('keytopics', '\W\zs\(DISCOVERY:\)')
+
+		" spacesHighlight
+		autocmd Syntax * call matchadd('spacesHighlight', '\W\zs\(    \)')
+
 	endif
 endif
 
