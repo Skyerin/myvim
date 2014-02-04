@@ -1,4 +1,18 @@
 --------------------------------------------------------------------------------------------------------------------
+ PHP
+--------------------------------------------------------------------------------------------------------------------
+If you have a file, which contains some data (lets say an array) which you want to have access to every now and then;
+
+Create the file. Make the data. Put a return at the end of it on that data.
+
+In the code where you need to use that data, put in a require/include statement and assign to a variable.
+E.G. $map = require "/path/to/the/file/which/we/are/looking/for.php";
+
+And voila, you now have access to that data anywhere you need it.
+This would probably be used for something like a config file with an associative array.
+
+
+--------------------------------------------------------------------------------------------------------------------
  GIT
 --------------------------------------------------------------------------------------------------------------------
 ----------------------------------------------------------

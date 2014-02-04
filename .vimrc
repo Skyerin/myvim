@@ -21,6 +21,11 @@ set showmatch
 set list
 set listchars=nbsp:.,tab:>.,trail:.,extends:#,
 
+" Use spaces instead of tabs for PSR reasons
+set tabstop=4
+set shiftwidth=4
+set expandtab
+
 " Show line numbers
 set number
 
@@ -43,7 +48,7 @@ colorscheme solarized
 
 " Custom keywords colour scheme
 highlight keytopics ctermbg=128 guibg=128 ctermfg=015 guifg=015 " 128 is a purple colour. 015 is white.
-highlight spacesHighlight ctermbg=183 guibg=183 ctermfg=183 guifg=183
+highlight spacesHighlight ctermbg=051 guibg=051 ctermfg=051 guifg=051
 
 if has("autocmd")
 	if v:version > 701
@@ -64,10 +69,6 @@ if has("autocmd")
 		autocmd Syntax * call matchadd('keytopics', '\W\zs\(I HAVE NO CLUE:\)')
 		autocmd Syntax * call matchadd('keytopics', '\W\zs\(EUREKA:\)')
 		autocmd Syntax * call matchadd('keytopics', '\W\zs\(DISCOVERY:\)')
-
-		" spacesHighlight
-		autocmd Syntax * call matchadd('spacesHighlight', '\W\zs\(    \)')
-
 	endif
 endif
 
@@ -76,6 +77,7 @@ if has("autocmd")
 endif
 
 " Tags file; using a project wide one. Because I'm lazy!!!
+" NOTE: FIX THIS! If it keeps looking this far back, everything will fuck up
 set tags=./tags,./../tags,./../../tags,./../../../tags,./../../../../tags,./../../../../../tags,./../../../../../../tags,./../../../../../../../tags,./../../../../../../../../tags
 
 " NEEDS ATTENTION: I want a find in files. Why? Because I said so. Sometimes the tags don't work!
@@ -88,3 +90,14 @@ map <F4> :execute "vimgrep /" . expand("<cword>") . "/j */**/*" <Bar> cw<CR>
 
 " Can we get this to work? Please...? UPDATE: This now works! :)
 autocmd FileType php set keywordprg=pman
+
+set pastetoggle=<F2>
+
+" Don't run messdetector on save (default = 1)
+let g:phpqa_messdetector_autorun = 1
+
+" Don't run codesniffer on save (default = 1)
+let g:phpqa_codesniffer_autorun = 0
+
+" Show code coverage on load (default = 0)
+let g:phpqa_codecoverage_autorun = 0
