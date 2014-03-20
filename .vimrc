@@ -78,7 +78,7 @@ endif
 
 " Tags file; using a project wide one. Because I'm lazy!!!
 " NOTE: FIX THIS! If it keeps looking this far back, everything will fuck up
-set tags=./tags,./../tags,./../../tags,./../../../tags,./../../../../tags,./../../../../../tags,./../../../../../../tags,./../../../../../../../tags,./../../../../../../../../tags
+set tags=./tags
 
 " NEEDS ATTENTION: I want a find in files. Why? Because I said so. Sometimes the tags don't work!
 " However, this bugger has it's own set of problems too! We need to find a way to make it start checking from the root directory of the project.
