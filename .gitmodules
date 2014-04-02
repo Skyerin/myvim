@@ -1,18 +1,6 @@
 [submodule "bundle/vim-neatstatus"]
 	path = bundle/vim-neatstatus
 	url = git://github.com/maciakl/vim-neatstatus.git
-[submodule "bundle/nerdcommenter"]
-	path = bundle/nerdcommenter
-	url = git://github.com/scrooloose/nerdcommenter.git
-[submodule "bundle/csapprox"]
-	path = bundle/csapprox
-	url = https://github.com/godlygeek/csapprox.git
-[submodule "bundle/solarized"]
-	path = bundle/solarized
-	url = https://github.com/altercation/vim-colors-solarized.git
-[submodule "bundle/autocose"]
-	path = bundle/autocose
-	url = https://github.com/Townk/vim-autoclose.git
 [submodule "bundle/vim-csapprox"]
 	path = bundle/vim-csapprox
 	url = https://github.com/godlygeek/csapprox.git
@@ -31,6 +19,9 @@
 [submodule "bundle/vim-bettercsssyntax"]
 	path = bundle/vim-bettercsssyntax
 	url = https://github.com/vim-scripts/Better-CSS-Syntax-for-Vim.git
-[submodule "bundle/vim-csscolour"]
-	path = bundle/vim-csscolour
-	url = https://github.com/ap/vim-css-color.git
+[submodule "bundle/vim-closetag"]
+	path = bundle/vim-closetag
+	url = https://github.com/vim-scripts/closetag.vim.git
+[submodule "bundle/vim-matchit"]
+	path = bundle/vim-matchit
+	url = https://github.com/edsono/vim-matchit.git
