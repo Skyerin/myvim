@@ -25,3 +25,9 @@
 [submodule "bundle/vim-matchit"]
 	path = bundle/vim-matchit
 	url = https://github.com/edsono/vim-matchit.git
+[submodule "bundle/vdebug"]
+	path = bundle/vdebug
+	url = git://github.com/joonty/vdebug.git
+[submodule "bundle/vim-less"]
+	path = bundle/vim-less
+	url = https://github.com/groenewege/vim-less
