@@ -47,7 +47,7 @@ let g:solarized_visibility="high"
 colorscheme solarized
 
 " Custom keywords colour scheme
-highlight keytopics ctermbg=128 guibg=128 ctermfg=015 guifg=015 " 128 is a purple colour. 015 is white.
+highlight keytopics ctermbg=128 guibg=128 ctermfg=015 guifg=015 " 128 is a purple colour - background. 015 is white - text.
 highlight spacesHighlight ctermbg=051 guibg=051 ctermfg=051 guifg=051
 
 if has("autocmd")
@@ -78,11 +78,11 @@ endif
 
 " Tags file; using a project wide one. Because I'm lazy!!!
 " NOTE: FIX THIS! If it keeps looking this far back, everything will fuck up
-set tags=./tags
+set tags=./tags;~/git
 
-" NEEDS ATTENTION: I want a find in files. Why? Because I said so. Sometimes the tags don't work!
-" However, this bugger has it's own set of problems too! We need to find a way to make it start checking from the root directory of the project.
-map <F4> :execute "vimgrep /" . expand("<cword>") . "/j */**/*" <Bar> cw<CR>
+" NOTE: stopping vimgrep as codebase is too big apparently
+"map <F4> :execute "vimgrep /" . expand("<cword>") . "/j */**/*" <Bar> cw<CR>
+map <F4> :execute "grep --include=*.yml --include=*.twig --include=*.php " . expand("<cword>") . " -R ./" <Bar> cw<CR>
 
 " Problem: Whenever I wanted to open stuff from the quickfix list, it would go over my current buffer.
 " That was an absolute pain. Therefore, the below should fix this! Yay!
@@ -94,10 +94,17 @@ autocmd FileType php set keywordprg=pman
 set pastetoggle=<F2>
 
 " Don't run messdetector on save (default = 1)
-let g:phpqa_messdetector_autorun = 1
+let g:phpqa_messdetector_autorun = 0
 
 " Don't run codesniffer on save (default = 1)
 let g:phpqa_codesniffer_autorun = 0
+let g:phpqa_codesniffer_args = "--standard=PSR2"
 
 " Show code coverage on load (default = 0)
 let g:phpqa_codecoverage_autorun = 0
+
+" XDebug config options
+let g:vdebug_options = {
+    \ 'path_maps': {"/home/vagrant" : "/home/syed/git"},
+    \ 'server': '0.0.0.0'
+\}

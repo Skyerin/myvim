@@ -1,6 +1,6 @@
 let g:netrw_dirhistmax  =10
 let g:netrw_dirhist_cnt =4
-let g:netrw_dirhist_1='/home/mujtaba/.vim'
-let g:netrw_dirhist_2='/var/www/sfds/buynow'
-let g:netrw_dirhist_3='/home/skyerin/code/sfds'
-let g:netrw_dirhist_4='/home/skyerin/code/sfdsv2/www/buynow'
+let g:netrw_dirhist_1='scp://vagrant@10.99.99.10//home/vagrant/'
+let g:netrw_dirhist_2='scp://vagrant@10.99.99.10//home/vagrant/frontend/'
+let g:netrw_dirhist_3='scp://vagrant@10.99.99.10//home/vagrant/frontend/app/'
+let g:netrw_dirhist_4='scp://vagrant@10.99.99.10//home/vagrant/frontend/app/logs/'
