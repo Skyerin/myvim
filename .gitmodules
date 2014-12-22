@@ -22,6 +22,3 @@
 [submodule "bundle/vim-vdebug"]
 	path = bundle/vim-vdebug
 	url = https://github.com/joonty/vdebug
-[submodule "bundle/vim-ternvim"]
-	path = bundle/vim-ternvim
-	url = https://github.com/marijnh/tern_for_vim.git
