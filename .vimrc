@@ -80,6 +80,8 @@ if has("autocmd")
 		autocmd Syntax * call matchadd('keytopics', '\W\zs\(SOLUTION:\)')
 		autocmd Syntax * call matchadd('keytopics', '\W\zs\(WTF:\)')
 		autocmd Syntax * call matchadd('keytopics', '\W\zs\(FIX THIS:\)')
+		autocmd Syntax * call matchadd('keytopics', '\W\zs\(FIX THIS BS:\)')
+		autocmd Syntax * call matchadd('keytopics', '\W\zs\(NEEDS FIXING:\)')
 	endif
 endif
 
@@ -151,3 +153,8 @@ let g:vdebug_options = {
 \ 'path_maps': {"/data/sites/frontend/latest/frontend": "/home/syed/git/frontend", "/data/sites/frontend/latest/frontend/src/Wren" : "/home/syed/git/frontend/src/Wren"},
 \ 'server': '0.0.0.0'
 \}
+
+" JSHINT stuff
+let jshint2_command = '/usr/local/bin/jshint'
+let jshint2_read = 1
+let jshint2_save = 1

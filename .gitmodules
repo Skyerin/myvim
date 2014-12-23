@@ -22,3 +22,6 @@
 [submodule "bundle/vim-vdebug"]
 	path = bundle/vim-vdebug
 	url = https://github.com/joonty/vdebug
+[submodule "bundle/vim-jshint2"]
+	path = bundle/vim-jshint2
+	url = https://github.com/Shutnik/jshint2.vim.git
