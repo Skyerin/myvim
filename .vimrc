@@ -95,7 +95,7 @@ set tags=tags;
 " find in files function. To use this, the command is :call Search("file extension go here","search string goes here", 1 or 0 (depending if we're in planner or not))
 function Search(fileType, searchString, excludeDirectory)
     if a:excludeDirectory
-        let excludeDirectory = "--exclude-dir=build --exclude-dir=dist "
+        let excludeDirectory = "--exclude-dir=lib --exclude-dir=bower_components --exclude-dir=node_modules --exclude-dir=build --exclude-dir=dist "
     else
         let excludeDirectory = ""
     endif
@@ -158,3 +158,9 @@ let g:vdebug_options = {
 let jshint2_command = '/usr/local/bin/jshint'
 let jshint2_read = 1
 let jshint2_save = 1
+
+function! DoPrettyJSON()
+exe "%!python -m json.tool"
+endfunction
+
+command! FormatJSON call DoPrettyJSON()

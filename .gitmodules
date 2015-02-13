@@ -25,3 +25,6 @@
 [submodule "bundle/vim-jshint2"]
 	path = bundle/vim-jshint2
 	url = https://github.com/Shutnik/jshint2.vim.git
+[submodule "bundle/vim-less"]
+	path = bundle/vim-less
+	url = https://github.com/groenewege/vim-less.git
