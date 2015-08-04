@@ -1,7 +1,4 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
-let g:netrw_dirhist_1='/home/syed/git/frontend/ddl'
-let g:netrw_dirhist_2='/home/syed/git/frontend/ddl/fron_2821_file_upload_types_index'
-let g:netrw_dirhist_3='/home/syed/git/frontend/ddl'
-let g:netrw_dirhist_4='/home/syed/git/frontend/src/Wren/OrdersBundle/Tests/SeleniumUnit'
-let g:netrw_dirhist_5='/home/syed/git/planner2d/src'
+let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_1='/home/syed/git/planner2d/src/widgets/mixins'
+let g:netrw_dirhist_2='/home/syed/git/planner2d/src/bootstrap'

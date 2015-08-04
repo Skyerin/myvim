@@ -46,12 +46,15 @@ set showcmd
 " line enables syntax highlighting by default.
 syntax on
 
-set background=dark
-let g:solarized_termtrans=1
-let g:solarized_termcolors=256
-let g:solarized_contrast="high"
-let g:solarized_visibility="high"
-colorscheme solarized
+syntax enable
+colorscheme monokai
+
+"set background=dark
+"let g:solarized_termtrans=1
+"let g:solarized_termcolors=256
+"let g:solarized_contrast="high"
+"let g:solarized_visibility="high"
+"colorscheme solarized
 
 " Custom keywords colour scheme
 highlight keytopics ctermbg=128 guibg=#AF00D7 ctermfg=015 guifg=#FFFFFF " 128 is a purple colour - background. 015 is white - text.
@@ -95,7 +98,7 @@ set tags=tags;
 " find in files function. To use this, the command is :call Search("file extension go here","search string goes here", 1 or 0 (depending if we're in planner or not))
 function Search(fileType, searchString, excludeDirectory)
     if a:excludeDirectory
-        let excludeDirectory = "--exclude-dir=lib --exclude-dir=bower_components --exclude-dir=node_modules --exclude-dir=build --exclude-dir=dist "
+        let excludeDirectory = "--exclude-dir=bower_components --exclude-dir=node_modules --exclude-dir=build --exclude-dir=dist "
     else
         let excludeDirectory = ""
     endif
