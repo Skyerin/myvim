@@ -4,7 +4,6 @@ runtime! debian.vim
 execute pathogen#infect()
 
 set nocompatible
-set history=50000
 set undolevels=50000
 set smartindent
 set tabstop=4
