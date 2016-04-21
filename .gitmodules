@@ -7,9 +7,6 @@
 [submodule "bundle/vim-autocose"]
 	path = bundle/vim-autocose
 	url = https://github.com/Townk/vim-autoclose.git
-[submodule "bundle/vim-phpqa"]
-	path = bundle/vim-phpqa
-	url = https://github.com/joonty/vim-phpqa.git
 [submodule "bundle/vim-fugitive"]
 	path = bundle/vim-fugitive
 	url = git://github.com/tpope/vim-fugitive.git
