@@ -13,10 +13,13 @@ set ignorecase
 set wrap
 
 set autowrite
+
+" show search as we search
 set incsearch
 set showmatch
-
 set hlsearch
+" Show the command as it's being typed
+set showcmd
 
 " Show trailing spaces, show tabs etc
 set list
@@ -33,9 +36,6 @@ set number
 " Show vertical line. Good for lining up code.
 set cursorcolumn
 
-" Show the command as it's being typed
-set showcmd
-
 "augroup myvimrc
 "    au!
 "    au BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
@@ -46,7 +46,7 @@ set showcmd
 syntax on
 
 syntax enable
-colorscheme monokai
+colorscheme elflord
 
 "set background=dark
 "let g:solarized_termtrans=1
@@ -97,7 +97,7 @@ set tags=tags;
 " find in files function. To use this, the command is :call Search("file extension go here","search string goes here", 1 or 0 (depending if we're in planner or not))
 function Search(fileType, searchString, excludeDirectory)
     if a:excludeDirectory
-        let excludeDirectory = "--exclude-dir=bower_components --exclude-dir=node_modules --exclude-dir=build --exclude-dir=dist "
+        let excludeDirectory = "--exclude-dir=node_modules --exclude-dir=vendor "
     else
         let excludeDirectory = ""
     endif
@@ -106,31 +106,13 @@ function Search(fileType, searchString, excludeDirectory)
     :copen
 endfunction
 
-
-" Custom command to run the js & css install
-command InstallJsAndCSS execute "!ssh dev 'cd /home/vagrant/frontend && app/console assetic:dump && app/console assets:install'"
-
 command RestartApache execute "!ssh dev 'sudo service apache2 restart'"
-
-command PlannerInstall execute "!cd /home/syed/git/planner2d && npm install && bower install && grunt setup && grunt build"
 
 " PROBLEM: Whenever I wanted to open stuff from the quickfix list, it would go over my current buffer.
 " That was an absolute pain. Therefore, the below should fix this! Yay!
 :set switchbuf+=usetab,newtab
 
-autocmd FileType php set keywordprg=pman
-
 set pastetoggle=<F2>
-
-" Don't run messdetector on save (default = 1)
-let g:phpqa_messdetector_autorun = 0
-
-" Don't run codesniffer on save (default = 1)
-let g:phpqa_codesniffer_autorun = 1
-let g:phpqa_codesniffer_args = "--standard=/home/syed/git/devenvironment/resources/phpcs.xml"
-
-" Show code coverage on load (default = 0)
-let g:phpqa_codecoverage_autorun = 0
 
 " Simple re-format for minified Javascript
 command! UnMinify call UnMinify()
@@ -142,27 +124,3 @@ function! UnMinify()
     %s/[^\s]\zs[=&|]\+\ze[^\s]/ \0 /g
     normal ggVG=
 endfunction
-
-map <C-o> :set paste<CR>:exe PhpDoc()<CR>:set nopaste<CR>i
-
-" Start interactive EasyAlign in visual mode (e.g. vip<Enter>)
-vmap <Enter> <Plug>(EasyAlign)
-
-" Start interactive EasyAlign for a motion/text object (e.g. <Leader>aip)
-nmap <Leader>a <Plug>(EasyAlign)
-
-let g:vdebug_options = {
-\ 'path_maps': {"/data/sites/frontend/latest/frontend": "/home/syed/git/frontend", "/data/sites/frontend/latest/frontend/src/Wren" : "/home/syed/git/frontend/src/Wren"},
-\ 'server': '0.0.0.0'
-\}
-
-" JSHINT stuff
-let jshint2_command = '/usr/local/bin/jshint'
-let jshint2_read = 1
-let jshint2_save = 1
-
-function! DoPrettyJSON()
-exe "%!python -m json.tool"
-endfunction
-
-command! FormatJSON call DoPrettyJSON()
