@@ -1,0 +1,12 @@
+set ignorecase
+
+" show search as we search
+set incsearch
+set showmatch
+set hlsearch
+
+" Show the command as it's being typed
+set showcmd
+
+" Show vertical line. Good for lining up code.
+set cursorcolumn
